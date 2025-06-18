@@ -33,7 +33,6 @@ h1 {
     font-size: clamp(3rem, 10vw, 5rem);
 }
 
-@media (min-width: 47em) {}
 
 
 /*# Links #*/
@@ -110,18 +109,31 @@ header {
 
 }
 
+#desktop-logo {
+    display: none;
+}
+
 /* Header Links */
 header a {
     text-decoration: none;
     color: var(--cream);
+    border-bottom: var(--brown) 1px solid;
+    padding: 0.5rem;
 }
 
-header a:visited {}
+header a:visited {
+    color: var(--cream);
+}
 
-header a:hover {}
+header a:hover {
+    border-bottom: var(--cream) 1px solid;
+}
 
 header a:focus,
-header a:active {}
+header a:active {
+    border-radius: 20%;
+    border: 1px solid var(--cream);
+}
 
 /* Mobile Menu Styles */
 
@@ -138,13 +150,14 @@ header a:active {}
 }
 
 .nav-menu {
-    display: none;
+    /* display: none; */
     position: absolute;
     bottom: 4.25rem;
     left: 50%;
     right: 0;
     background-color: var(--brown);
     padding: 1rem;
+    padding-bottom: 2rem;
     z-index: 999;
     text-align: end;
 }
@@ -153,6 +166,90 @@ header a:active {}
     list-style: none;
     padding: 1rem;
     border-bottom: 1px var(--cream) solid;
+
+}
+
+@media (min-width: 60em) {
+    header {
+        position: static;
+        background-color: var(--brown);
+        border-image: url('/assets/border-tile.svg') 0 0 100% 0 / 1rem / 1rem repeat;
+        display: grid;
+        grid-template-columns: 1fr 6.75rem 11.125rem 4.6875rem 11.125rem 4.6875rem 11.125rem 6.75rem 1fr;
+        z-index: 999;
+
+        padding: 1rem 2rem;
+    }
+
+    /* Header Logo */
+    #desktop-logo {
+        display: block;
+    }
+
+    #mobile-logo {
+        display: none;
+    }
+
+    .logo-container {
+        display: block;
+        margin: auto 0;
+        grid-column: 2/4;
+        height: 4rem;
+        width: auto;
+        border-radius: 0;
+        border: none;
+        border-bottom: 4px solid var(--brown);
+    }
+
+    /* Adapted from https://css-tricks.com/css-link-hover-effects/ */
+    /* TODO: Get this working? */
+    /* 
+    .logo-container::before {
+        content: '';
+        position: absolute;
+        grid-column: 2/4;
+        width: 12rem;
+        height: 4px;
+        border-radius: 4px;
+        background-color: var(--cream);
+        bottom: 1rem;
+        left: 1rem;
+        transform-origin: right;
+        transform: scaleX(0);
+        transition: transform .3s ease-in-out;
+    }
+
+    .logo-container:hover::before {
+        transform-origin: left;
+        transform: scaleX(1);
+    } */
+
+    /* .logo-container:focus,
+    .logo-container:active {
+        border-bottom: 5px solid var(--cream);
+    } */
+
+    /* Header Links */
+    .menu-toggle {
+        display: none;
+    }
+
+    .site-navigation {
+        grid-column: 6/9;
+    }
+
+    .nav-menu {
+        padding: 0;
+        margin: 0;
+        font-size: 1.2rem;
+        display: flex;
+        gap: 2rem;
+        position: static;
+    }
+
+    .nav-menu li {
+        border: none;
+    }
 
 }
 
