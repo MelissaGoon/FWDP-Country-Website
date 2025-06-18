@@ -146,6 +146,10 @@ header a:active {
     width: 2rem;
 }
 
+.close-icon {
+    display: none;
+}
+
 .nav-menu {
     display: none;
     position: absolute;
@@ -235,7 +239,7 @@ header a:active {
         margin: 0;
         font-size: 1.1rem;
         display: flex;
-        gap: 2rem;
+        gap: 1rem;
         position: static;
     }
 
