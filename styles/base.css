@@ -1,7 +1,8 @@
 /*## Base ##*/
 :root {
     --dark-brown: #391809;
-    --light-brown: #774723;
+    --brown: #774723;
+    --light-brown: #b99268;
     --cream: #fbf5e9;
 
 }
@@ -12,6 +13,7 @@ html {
 
 body {
     background-color: var(--cream);
+    font-family: "Libre Baskerville", serif;
 
 }
 
@@ -20,13 +22,13 @@ h2,
 h3,
 h4,
 h5,
-h6 {}
+h6 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    color: var(--dark-brown);
+    text-transform: uppercase;
+}
 
-h1 {}
-
-h2 {}
-
-h3 {}
 
 @media (min-width: 47em) {}
 
@@ -90,13 +92,16 @@ header {
 
 .logo-container:focus,
 .logo-container:active {
-    background-color: var(--light-brown);
+    background-color: var(--brown);
     border-color: var(--cream);
 
 }
 
 /* Header Links */
-header a {}
+header a {
+    text-decoration: none;
+    color: var(--cream);
+}
 
 header a:visited {}
 
@@ -119,6 +124,35 @@ header a:active {}
     width: 2rem;
 }
 
+.nav-menu {
+    display: none;
+    position: absolute;
+    bottom: 4.25rem;
+    left: 50%;
+    right: 0;
+    background-color: var(--brown);
+    padding: 1rem;
+    z-index: 2;
+    text-align: end;
+}
+
+.nav-menu li {
+    list-style: none;
+    padding: 1rem;
+    border-bottom: 1px var(--cream) solid;
+
+}
+
+
+/* TODO: REMOVE IF NOT USING */
+.current-nav {
+    text-decoration: underline overline var(--cream);
+}
 
 
 /*# Footer #*/
+footer {
+    background-color: var(--light-brown);
+    padding: 5rem 2rem;
+    text-align: center;
+}
