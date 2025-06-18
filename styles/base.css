@@ -91,7 +91,7 @@ header {
 .logo-container {
     display: block;
     height: 3rem;
-    width: 3rem;
+    width: auto;
     padding: 0.2rem;
     border: var(--dark-brown) 1px solid;
     border-radius: 10%;
@@ -109,9 +109,6 @@ header {
 
 }
 
-#desktop-logo {
-    display: none;
-}
 
 /* Header Links */
 header a {
@@ -150,12 +147,13 @@ header a:active {
 }
 
 .nav-menu {
-    /* display: none; */
+    display: none;
     position: absolute;
     bottom: 4.25rem;
     left: 50%;
     right: 0;
     background-color: var(--brown);
+    border-image: url('/assets/flower-icon.svg') 100% / 1rem repeat;
     padding: 1rem;
     padding-bottom: 2rem;
     z-index: 999;
@@ -182,13 +180,6 @@ header a:active {
     }
 
     /* Header Logo */
-    #desktop-logo {
-        display: block;
-    }
-
-    #mobile-logo {
-        display: none;
-    }
 
     .logo-container {
         display: block;
@@ -239,9 +230,10 @@ header a:active {
     }
 
     .nav-menu {
+        border: none;
         padding: 0;
         margin: 0;
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         display: flex;
         gap: 2rem;
         position: static;
