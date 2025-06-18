@@ -15,7 +15,7 @@ main {
 }
 
 .hero-image {
-    background: url('/assets/images/mobile-hero.jpg') no-repeat;
+    background: url('/assets/images/mobile-hero.png') no-repeat;
     background-size: cover;
 
     width: 100%;
@@ -40,8 +40,9 @@ main {
     max-width: 90vw;
     margin-left: auto;
     margin-right: auto;
-    background-color: var(--dark-brown);
 }
+
+/* Could use border-image or before and after?? */
 
 .window-link {
     text-align: center;
@@ -49,5 +50,6 @@ main {
     background: url('/assets/window-frame.svg') no-repeat center;
     width: auto;
     height: clamp(10rem, 80vh, 50rem);
-
 }
+
+.window-link img {}
