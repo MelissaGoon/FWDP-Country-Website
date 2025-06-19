@@ -25,7 +25,50 @@
 </head>
 
 <body>
+    <div class="site-wrapper">
+        <header>
+            <a href="index.html" class="logo-container">
 
+                <img id="desktop-logo" src="assets/penang-logo.svg"
+                    alt="Logo for the website containing an illustration of a tile and the text Penang Malaysia">
+            </a>
+
+            <nav class="site-navigation" id="site-navigation">
+                <!-- Hamburger menu adapted from FWDP 1000 day-04 files-->
+                <button class="menu-toggle" id="menu-toggle" aria-controls="header-menu" aria-expanded="false"
+                    aria-label="Toggles navigation menu">
+
+                    <svg class="menu-icon" width="79" height="74" viewBox="0 0 79 74" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 5H74M5 69H74M5 37H74" stroke="#FBF5E9" stroke-width="9" stroke-linecap="round" />
+                    </svg>
+                    <title>Menu Icon</title>
+                    </svg>
+
+                    <svg class="close-icon" width="73" height="73" viewBox="0 0 73 73" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 67.9999L68 5M5 5.00011L68 68" stroke="#FBF5E9" stroke-width="9"
+                            stroke-linecap="round" />
+                        <title>Close Menu Icon</title>
+                    </svg>
+
+                </button>
+
+                <ul class="nav-menu" id="header-menu">
+                    <li><a id="heritage.html" href="heritage.html"> Heritage</a></li>
+                    <li><a id="food.html" href="food.html"> Food</a></li>
+                    <li><a id="sources.html" href="sources.html"> Sources</a></li>
+                </ul>
+
+            </nav>
+        </header>
+
+
+        <!-- Content here -->
+    </div>
+
+    <script src="scripts/navigation.js"></script>
+    <script src="scripts/highlight-page.js"></script>
 </body>
 
 </html>

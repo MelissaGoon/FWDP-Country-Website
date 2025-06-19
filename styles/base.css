@@ -195,6 +195,11 @@ header a:active {
     display: block;
 }
 
+.current-nav {
+    border-top: var(--cream) 1px solid;
+    border-bottom: var(--cream) 1px solid;
+}
+
 @media (min-width: 60em) {
     header {
         position: static;
@@ -269,13 +274,10 @@ header a:active {
         left: 0;
     }
 
+    .current-nav {
+        border-bottom: var(--brown) 1px solid;
+    }
 
-}
-
-
-/* TODO: REMOVE IF NOT USING */
-.current-nav {
-    text-decoration: overline var(--cream);
 }
 
 
