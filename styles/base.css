@@ -21,6 +21,7 @@ html {
 body {
     background-color: var(--cream);
     font-family: "Libre Baskerville", serif;
+    color: var(--dark-brown);
 
 }
 
@@ -40,24 +41,21 @@ h1 {
     font-size: clamp(3rem, 10vw, 5rem);
 }
 
-
-
 /*# Links #*/
 a {
-    color: var(--dark-green);
-    text-decoration: none;
+    color: var(--dark-brown);
     font-style: italic;
 
 }
 
 a:visited {
-    color: var(--dark-green);
+    color: var(--dark-brown);
     text-decoration: wavy;
 
 }
 
 a:hover {
-    text-decoration: underline overline var(--dark-green);
+    text-decoration: underline overline var(--dark-brown);
 }
 
 a:focus,
@@ -65,6 +63,8 @@ a:active {
     color: var(--cream);
     background-color: var(--dark-green);
 }
+
+
 
 /*# Elements #*/
 table {

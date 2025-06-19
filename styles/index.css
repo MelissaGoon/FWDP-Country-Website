@@ -79,11 +79,53 @@ main {
 
 @media (min-width: 60em) {
     #main-info {
-        grid-row: 15/16;
+        grid-row: 15/23;
         grid-column: 3/8;
         z-index: 1;
         color: var(--cream);
+        text-align: center;
     }
+
+    #main-info h2 {
+        color: var(--cream);
+    }
+
+    #main-info p {
+        text-align: left;
+    }
+
+    #main-info a,
+    #main-info a:visited {
+        color: var(--cream);
+
+    }
+
+    #main-info a:hover {
+        text-decoration: underline overline var(--cream);
+    }
+
+    #main-info a:focus,
+    #main-info a:active {
+        color: var(--dark-green);
+        background-color: var(--cream);
+    }
+
+    .climate-table {
+        max-width: 100%;
+        overflow: auto;
+        margin: 2rem 0;
+        text-align: center;
+        margin-top: 3rem;
+        background-color: rgba(0, 76, 29, 0.85);
+        padding: 1rem;
+        border-radius: 2%;
+    }
+
+    .climate-table th,
+    .climate-table td {
+        border: var(--cream) 1px solid;
+    }
+
 }
 
 /* Link Gallery */
@@ -118,7 +160,6 @@ main {
 
 /* Overriding defaults */
 .window-frame-link:visited {
-    color: var(--cream);
     text-decoration: none;
 }
 
@@ -193,7 +234,8 @@ main {
     #link-section h2 {
         border: none;
         font-size: 2.5rem;
-        background-color: var(--dark-brown);
+        background: var(--dark-brown);
+        background: radial-gradient(circle, rgba(57, 24, 9, 0.8) 46%, rgba(57, 24, 9, 0) 100%);
         color: var(--cream);
         margin-bottom: 8rem;
 

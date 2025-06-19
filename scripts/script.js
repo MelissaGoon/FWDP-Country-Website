@@ -1,5 +1,6 @@
 const pageLinks = document.querySelectorAll("#header-menu a");
 
+// Highlights current page in navbar
 
 document.addEventListener("DOMContentLoaded", function () {
     const urlArr = window.location.href.split('/');
