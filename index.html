@@ -7,8 +7,8 @@
     <meta name="description"
         content="The homepage for a tourism website for Penang containing information about Penang and links to the other pages.">
 
-    <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
+    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <link rel="shortcut icon" href="favicon/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
     <link rel="manifest" href="favicon/site.webmanifest" />
@@ -102,7 +102,7 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>Daily Mean Temperature</td>
+                                <th>Daily Mean Temperature</th>
                                 <td>26.9 °C</td>
                                 <td>27.4 °C</td>
                                 <td>27.6 °C</td>
@@ -117,7 +117,7 @@
                                 <td>26.7 °C</td>
                             </tr>
                             <tr>
-                                <td>Average Rainy Days (≥ 1.0 mm)</td>
+                                <th>Average Rainy Days (≥ 1.0 mm)</th>
                                 <td>5</td>
                                 <td>6</td>
                                 <td>9</td>
@@ -137,14 +137,33 @@
 
             </section>
 
-            <section id="link-gallery">
-                <article class="window-link">
-                    <a href="heritage.html">
-                        <img src="assets/images/heritage-img.jpg"
+            <section id="link-section">
+                <h2> Explore </h2>
+
+                <div class="link-gallery">
+
+                    <a href="heritage.html" class="window-frame">
+                        <img class="link-img" src="assets/images/heritage-img.png"
                             alt="Image of a street in Penang showing some shophouses and rickshaws.">
+                        <img class="frame-svg" src="assets/window-frame-brown.svg" alt="#">
                         <h3> Heritage</h3>
                     </a>
-                </article>
+
+                    <a href="food.html" class="window-frame">
+                        <img class="link-img" src="assets/images/food-img.png"
+                            alt="Image of a bowl of prawn noodle soup.">
+                        <img class="frame-svg" src="assets/window-frame-brown.svg" alt="#">
+                        <h3> Food</h3>
+                    </a>
+
+                    <a href="sources.html" class="window-frame">
+                        <img class="link-img" src="assets/images/sources-img.png"
+                            alt="Image of heritage houses in Penang.">
+                        <img class="frame-svg" src="assets/window-frame-brown.svg" alt="#">
+                        <h3> Sources</h3>
+                    </a>
+
+                </div>
 
             </section>
 

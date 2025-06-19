@@ -11,7 +11,8 @@ main {
     top: 2rem;
 
     color: var(--cream);
-    text-shadow: 0 0 2rem rgba(0, 0, 0, 1);
+    text-shadow: 0 1rem 2rem rgba(0, 0, 0, 1),
+        0 -1rem 2rem rgba(0, 0, 0, 1);
 }
 
 .hero-image {
@@ -35,21 +36,71 @@ main {
 }
 
 /* Link Gallery */
-#link-gallery {
+#link-section {
     padding: 1rem;
     max-width: 90vw;
     margin-left: auto;
     margin-right: auto;
-}
-
-/* Could use border-image or before and after?? */
-
-.window-link {
     text-align: center;
-    position: relative;
-    background: url('/assets/window-frame.svg') no-repeat center;
-    width: auto;
-    height: clamp(10rem, 80vh, 50rem);
 }
 
-.window-link img {}
+#link-section h2 {
+    padding: 1rem;
+    border-bottom: 2px solid var(--dark-brown);
+}
+
+.link-gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.window-frame {
+    display: grid;
+    width: 16rem;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(8, 3.75rem);
+    text-decoration: none;
+}
+
+.window-frame h3 {
+    align-self: center;
+    grid-row: 6/8;
+    grid-column: 2/7;
+    z-index: 2;
+    margin: 0;
+    font-size: 2rem;
+    color: var(--cream);
+
+}
+
+.link-img {
+    grid-row: 3/8;
+    grid-column: 2/7;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    filter: grayscale(0.1) sepia(0.5) brightness(0.5);
+}
+
+.window-frame:focus .link-img,
+.window-frame:active .link-img {
+    filter: brightness(0.9);
+}
+
+.window-frame:focus h3,
+.window-frame:active h3 {
+    text-decoration: overline var(--cream);
+    text-shadow: 0 1rem 2rem rgba(0, 0, 0, 1),
+        0 -1rem 2rem rgba(0, 0, 0, 1);
+
+}
+
+.frame-svg {
+    grid-row: 1/9;
+    grid-column: 1/8;
+    z-index: 3;
+}
