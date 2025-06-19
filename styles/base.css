@@ -4,6 +4,7 @@
     --brown: #774723;
     --light-brown: #b99268;
     --cream: #fbf5e9;
+    --dark-green: #004C1D;
 
 }
 
@@ -42,24 +43,30 @@ h1 {
 
 
 /*# Links #*/
-a {}
+a {
+    color: var(--dark-green);
+    text-decoration: none;
+    font-style: italic;
 
-a:visited {}
+}
 
-a:hover {}
+a:visited {
+    color: var(--dark-green);
+    text-decoration: wavy;
+
+}
+
+a:hover {
+    text-decoration: underline overline var(--dark-green);
+}
 
 a:focus,
-a:active {}
+a:active {
+    color: var(--cream);
+    background-color: var(--dark-green);
+}
 
 /*# Elements #*/
-ul {}
-
-ol {}
-
-dl {}
-
-figure {}
-
 table {
     border-collapse: collapse;
 }
@@ -100,15 +107,21 @@ header a {
     color: var(--cream);
     border-bottom: var(--brown) 1px solid;
     padding: 0.5rem;
+    font-style: normal;
 }
 
 header a:visited {
     color: var(--cream);
 }
 
+header a:hover {
+    text-decoration: none;
+}
+
 header a:focus,
 header a:active {
     border-bottom: var(--cream) 1px solid;
+    background-color: var(--brown);
 }
 
 /* Header Logo */
@@ -207,8 +220,6 @@ header a:active {
         border-image: url('/assets/border-tile.svg') 0 0 100% 0 / 1rem / 1rem repeat;
         display: grid;
         grid-template-columns: 1fr 6.75rem 11.125rem 4.6875rem 11.125rem 4.6875rem 11.125rem 6.75rem 1fr;
-        z-index: 999;
-
         padding: 1rem 2rem;
     }
 

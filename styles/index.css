@@ -4,6 +4,24 @@ main {
     position: relative;
 }
 
+.desktop-bg {
+    display: none;
+}
+
+@media (min-width: 60em) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr 6.75rem 11.125rem 4.6875rem 11.125rem 4.6875rem 11.125rem 6.75rem 1fr;
+        grid-template-rows: 1rem repeat(22, 1fr);
+    }
+
+    .desktop-bg {
+        display: block;
+        grid-column: 2/9;
+        grid-row: 2/23;
+    }
+}
+
 /* Page Title */
 .title {
     position: absolute;
@@ -21,6 +39,21 @@ main {
 
     width: 100%;
     height: 10rem;
+}
+
+@media (min-width: 60em) {
+    .title {
+        position: static;
+        text-shadow: none;
+        color: var(--dark-brown);
+
+    }
+
+    .hero-image {
+        display: none;
+    }
+
+
 }
 
 /* Main Info */
@@ -102,4 +135,10 @@ main {
     grid-row: 1/9;
     grid-column: 1/8;
     z-index: 3;
+}
+
+@media (min-width: 60em) {
+    .frame-svg {
+        display: none;
+    }
 }
