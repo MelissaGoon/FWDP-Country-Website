@@ -13,12 +13,14 @@ main {
         display: grid;
         grid-template-columns: 1fr 6.75rem 11.125rem 4.6875rem 11.125rem 4.6875rem 11.125rem 6.75rem 1fr;
         grid-template-rows: 1rem repeat(22, 1fr);
+        height: 84.25rem;
     }
 
     .desktop-bg {
         display: block;
         grid-column: 2/9;
         grid-row: 2/23;
+
     }
 }
 
@@ -44,15 +46,22 @@ main {
 @media (min-width: 60em) {
     .title {
         position: static;
-        text-shadow: none;
-        color: var(--dark-brown);
+        text-shadow: 5px 5px 0px var(--dark-green);
+        grid-row: 13/15;
+        grid-column: 4/7;
+        margin: 0;
+        margin-top: 1rem;
 
     }
 
     .hero-image {
-        display: none;
+        grid-row: 13/23;
+        grid-column: 3/8;
+        background: url('/assets/images/desktop-hero.png') no-repeat;
+        filter: brightness(0.4) sepia(0.2);
+        height: 100%;
+        z-index: -1;
     }
-
 
 }
 
@@ -66,6 +75,15 @@ main {
     overflow: scroll;
     margin: 2rem 0;
     text-align: center;
+}
+
+@media (min-width: 60em) {
+    #main-info {
+        grid-row: 15/16;
+        grid-column: 3/8;
+        z-index: 1;
+        color: var(--cream);
+    }
 }
 
 /* Link Gallery */
@@ -89,15 +107,32 @@ main {
     gap: 1rem;
 }
 
-.window-frame {
+.window-frame-link {
     display: grid;
     width: 16rem;
     grid-template-columns: repeat(7, 1fr);
     grid-template-rows: repeat(8, 3.75rem);
     text-decoration: none;
+    font-style: normal;
 }
 
-.window-frame h3 {
+/* Overriding defaults */
+.window-frame-link:visited {
+    color: var(--cream);
+    text-decoration: none;
+}
+
+.window-frame-link:hover {
+    text-decoration: none;
+}
+
+.window-frame-link:focus,
+.window-frame-link:active {
+    color: var(--cream);
+    background: none;
+}
+
+.window-frame-link h3 {
     align-self: center;
     grid-row: 6/8;
     grid-column: 2/7;
@@ -118,13 +153,20 @@ main {
     filter: grayscale(0.1) sepia(0.5) brightness(0.5);
 }
 
-.window-frame:focus .link-img,
-.window-frame:active .link-img {
-    filter: brightness(0.9);
+.window-frame-link:hover .link-img,
+.window-frame-link:focus .link-img,
+.window-frame-link:active .link-img {
+    filter: brightness(1);
+
 }
 
-.window-frame:focus h3,
-.window-frame:active h3 {
+.window-frame-link:hover h3 {
+    text-shadow: 0 1rem 2rem rgba(0, 0, 0, 1),
+        0 -1rem 2rem rgba(0, 0, 0, 1);
+}
+
+.window-frame-link:focus h3,
+.window-frame-link:active h3 {
     text-decoration: overline var(--cream);
     text-shadow: 0 1rem 2rem rgba(0, 0, 0, 1),
         0 -1rem 2rem rgba(0, 0, 0, 1);
@@ -141,4 +183,68 @@ main {
     .frame-svg {
         display: none;
     }
+
+    #link-section {
+        grid-column: 3/8;
+        grid-row: 3/12;
+        padding: 0;
+    }
+
+    #link-section h2 {
+        border: none;
+        font-size: 2.5rem;
+        background-color: var(--dark-brown);
+        color: var(--cream);
+        margin-bottom: 8rem;
+
+    }
+
+    #link-section h2::before,
+    #link-section h2::after {
+        content: '';
+        background-image: url("/assets/flower-icon-light.svg");
+        display: inline-block;
+        width: 2rem;
+        height: 2rem;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+
+    }
+
+    .link-gallery {
+        display: grid;
+        grid-template-columns: 11.125rem 4.6875rem 11.125rem 4.6875rem 11.125rem;
+        gap: 0;
+        margin-bottom: 0;
+    }
+
+    .window-frame-link {
+        width: 11.125rem;
+        height: 18rem;
+        display: block;
+        position: relative;
+    }
+
+    .window-frame-link h3 {
+        position: absolute;
+        bottom: 10%;
+        left: 0;
+        right: 0;
+
+    }
+
+    .heritage {
+        grid-column: 1/2;
+    }
+
+    .food {
+        grid-column: 3/4;
+    }
+
+    .sources {
+        grid-column: 5/6;
+    }
+
+
 }
