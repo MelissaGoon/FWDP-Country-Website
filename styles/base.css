@@ -128,14 +128,9 @@ header a:visited {
     color: var(--cream);
 }
 
-header a:hover {
-    border-bottom: var(--cream) 1px solid;
-}
-
 header a:focus,
 header a:active {
-    border-radius: 20%;
-    border: 1px solid var(--cream);
+    border-bottom: var(--cream) 1px solid;
 }
 
 /* Mobile Menu Styles */
@@ -202,34 +197,6 @@ header a:active {
         border-bottom: 4px solid var(--brown);
     }
 
-    /* Adapted from https://css-tricks.com/css-link-hover-effects/ */
-    /* TODO: Get this working? */
-    /* 
-    .logo-container::before {
-        content: '';
-        position: absolute;
-        grid-column: 2/4;
-        width: 12rem;
-        height: 4px;
-        border-radius: 4px;
-        background-color: var(--cream);
-        bottom: 1rem;
-        left: 1rem;
-        transform-origin: right;
-        transform: scaleX(0);
-        transition: transform .3s ease-in-out;
-    }
-
-    .logo-container:hover::before {
-        transform-origin: left;
-        transform: scaleX(1);
-    } */
-
-    /* .logo-container:focus,
-    .logo-container:active {
-        border-bottom: 5px solid var(--cream);
-    } */
-
     /* Header Links */
     .menu-toggle {
         display: none;
@@ -253,12 +220,39 @@ header a:active {
         border: none;
     }
 
+    /* Adapted from: https://codepen.io/jstn/pen/mdoOZJ */
+    .nav-menu a,
+    .logo-container {
+        position: relative;
+    }
+
+    .nav-menu a:after,
+    .logo-container:after {
+        background: none repeat scroll 0 0 transparent;
+        bottom: 0;
+        content: "";
+        display: block;
+        height: 1px;
+        left: 50%;
+        position: absolute;
+        background: var(--cream);
+        transition: width 0.3s ease 0s, left 0.3s ease 0s;
+        width: 0;
+    }
+
+    .nav-menu a:hover:after,
+    .logo-container:hover::after {
+        width: 100%;
+        left: 0;
+    }
+
+
 }
 
 
 /* TODO: REMOVE IF NOT USING */
 .current-nav {
-    text-decoration: underline overline var(--cream);
+    text-decoration: overline var(--cream);
 }
 
 
