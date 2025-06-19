@@ -93,28 +93,6 @@ header {
     z-index: 999;
 }
 
-/* Header Logo */
-.logo-container {
-    display: block;
-    height: 3rem;
-    width: auto;
-    padding: 0.2rem;
-    border: var(--dark-brown) 1px solid;
-    border-radius: 10%;
-}
-
-.logo-container img {
-    height: 100%;
-    width: 100%;
-}
-
-.logo-container:focus,
-.logo-container:active {
-    background-color: var(--brown);
-    border-color: var(--cream);
-
-}
-
 
 /* Header Links */
 header a {
@@ -133,11 +111,36 @@ header a:active {
     border-bottom: var(--cream) 1px solid;
 }
 
+/* Header Logo */
+.logo-container {
+    display: block;
+    height: 3rem;
+    width: auto;
+    padding: 0.2rem;
+    border: var(--dark-brown) 1px solid;
+    border-radius: 10%;
+}
+
+.logo-container img {
+    height: 100%;
+    width: 100%;
+}
+
+.logo-container:focus,
+.logo-container:active,
+.menu-toggle:active,
+.menu-toggle:focus {
+    background-color: var(--brown);
+    border-color: var(--cream);
+
+}
+
 /* Mobile Menu Styles */
 
 .menu-toggle {
     background: none;
-    border: none;
+    border: var(--dark-brown) 1px solid;
+    border-radius: 10%;
     padding: 0.5rem;
 
 }
@@ -151,18 +154,22 @@ header a:active {
     display: none;
 }
 
+.menu-icon {
+    display: block;
+}
+
 .nav-menu {
-    display: none;
     position: absolute;
-    bottom: 4.25rem;
-    left: 50%;
-    right: 0;
+    bottom: 4rem;
+    right: -100%;
+    width: 60%;
     background-color: var(--brown);
-    border-image: url('/assets/flower-icon.svg') 100% / 1rem repeat;
+    border-image: url('/assets/flower-icon-light.svg') 100% / 1rem repeat;
     padding: 1rem;
     padding-bottom: 2rem;
     z-index: 999;
     text-align: end;
+    transition: right 0.5s ease;
 }
 
 .nav-menu li {
@@ -170,6 +177,22 @@ header a:active {
     padding: 1rem;
     border-bottom: 1px var(--cream) solid;
 
+}
+
+/* Toggled menu styles */
+
+.site-navigation.toggled .nav-menu {
+    right: 0;
+    transition: right 0.5s ease;
+
+}
+
+.site-navigation.toggled .menu-icon {
+    display: none;
+}
+
+.site-navigation.toggled .close-icon {
+    display: block;
 }
 
 @media (min-width: 60em) {
