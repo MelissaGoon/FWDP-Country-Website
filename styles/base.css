@@ -82,6 +82,56 @@ ul {
     padding: 0;
 }
 
+/* Forms */
+form {
+    border: 2px dotted var(--brown);
+    border-radius: 10px;
+    max-width: fit-content;
+    padding: 1rem 2rem;
+    margin: 0 auto;
+}
+
+input {
+    border: 2px solid var(--dark-brown);
+    border-radius: 5px;
+    color: var(--dark-brown);
+
+}
+
+input::placeholder {
+    color: rgba(57, 24, 9, 0.7);
+    font-style: italic;
+}
+
+input[type="submit"] {
+    background-color: var(--dark-green);
+    border-color: var(--dark-green);
+    color: var(--cream);
+    padding: 0.5rem;
+}
+
+input[type="text"],
+input[type="email"] {
+    background-color: var(--cream);
+    padding: 0.5rem;
+    max-width: 100%;
+}
+
+input[type="submit"]:focus,
+input[type="submit"]:focus-visible {
+    border: solid 1px var(--cream);
+    outline: var(--cream);
+}
+
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+    background-color: #feda91;
+}
+
+label[for="consent"] {
+    font-size: 0.9rem;
+}
 
 /*# Text Decoration #*/
 .flowers::after,
@@ -352,6 +402,7 @@ header a:active {
 /*# Footer #*/
 footer {
     background-color: var(--light-brown);
-    padding: 5rem 2rem;
+    padding: 2rem;
+    padding-bottom: 5rem;
     text-align: center;
 }
