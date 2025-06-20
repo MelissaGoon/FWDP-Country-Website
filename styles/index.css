@@ -20,8 +20,6 @@ main {
         display: block;
         grid-column: 2/9;
         grid-row: 2/23;
-        pointer-events: none;
-        z-index: 3;
     }
 }
 
@@ -130,6 +128,13 @@ main {
     border-bottom: 2px solid var(--dark-brown);
 }
 
+#link-section h2.flowers::after,
+#link-section h2.flowers::before {
+    background-image: url("../assets/flower-icon-dark.svg");
+    width: 1.4rem;
+    height: 1.4rem;
+}
+
 .link-gallery {
     display: flex;
     justify-content: center;
@@ -226,6 +231,13 @@ main {
         color: var(--cream);
         margin-bottom: 8rem;
 
+    }
+
+    #link-section h2.flowers::after,
+    #link-section h2.flowers::before {
+        background-image: url("../assets/flower-icon-light.svg");
+        width: 2rem;
+        height: 2rem;
     }
 
     .link-gallery {

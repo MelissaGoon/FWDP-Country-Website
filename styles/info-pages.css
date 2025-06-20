@@ -5,9 +5,95 @@
     filter: sepia(0.5) brightness(0.8) saturate(1.5);
 }
 
-/* Information Gallery */
+/* Quote */
+
+.quote {
+    padding: 2rem;
+    max-width: 30rem;
+    margin: 0 auto;
+}
+
+
+.quote blockquote {
+    margin: 0;
+}
+
+.quote-text::first-letter {
+    font-size: 1.5rem;
+}
+
+.citation {
+    font-size: 0.8rem;
+    text-align: end;
+}
+
+@media (min-width: 60em) {
+    .quote {
+        padding: 2rem 5rem;
+        font-size: 1.3rem;
+        max-width: var(--content-width);
+    }
+
+    .quote-text {
+        line-height: 3rem;
+    }
+
+    .quote-text::first-letter {
+        font-size: 1.7rem;
+    }
+
+    .citation {
+        font-size: 1rem;
+    }
+}
+
+/* Scroll Button */
+.scroll-btn {
+    display: block;
+    margin: 0 auto;
+    max-width: fit-content;
+    border-top: 1px solid var(--cream);
+    border-bottom: 1px solid var(--cream);
+    padding: 0.5rem;
+    transition: scale .2s ease-in-out;
+}
+
+.scroll-btn:hover {
+    transform: scale(1.1);
+
+}
+
+.scroll-btn:focus,
+.scroll-btn:active {
+    background: none;
+}
+
+.scroll-btn:focus svg,
+.scroll-btn:active svg {
+    stroke: var(--dark-brown);
+    stroke-width: 3;
+}
+
+.scroll-btn:focus path,
+.scroll-btn:active path {
+    fill: var(--cream);
+}
+
+
+
+/* Information Section */
+
+.info-section {
+    padding: 1rem;
+    text-align: center;
+}
+
+.info-section h2 {
+    font-size: 2rem;
+}
+
 .info-gallery {
-    padding: 3rem 1rem;
+    text-align: left;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -30,11 +116,12 @@
     margin: 1rem 0;
 }
 
-.info-card h2 {
+.info-card h3 {
     margin: 0;
+    font-size: 1.5em;
 }
 
-.info-card h2::after {
+.info-card h3::after {
     content: '';
     background-image: url("../assets/flower-icon-dark.svg");
     display: inline-block;
@@ -73,7 +160,7 @@
 
     .info-card {
         flex-direction: row;
-        max-width: 70.75rem;
+        max-width: var(--content-width);
         height: 20rem;
     }
 
