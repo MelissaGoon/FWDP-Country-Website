@@ -19,9 +19,8 @@ document.addEventListener("DOMContentLoaded", function () {
 function playPauseVideo() {
     let videos = document.querySelectorAll("video");
     videos.forEach((video) => {
-        // We can only control playback without insteraction if video is mute
+
         video.muted = true;
-        // Play is a promise so we need to check we have it
         let playPromise = video.play();
         if (playPromise !== undefined) {
             playPromise.then((_) => {
@@ -38,7 +37,8 @@ function playPauseVideo() {
                             }
                         });
                     },
-                    { threshold: 0.2 }
+                    { threshold: 1 }
+                    // Video only plays when fully on screen
                 );
                 observer.observe(video);
             });
