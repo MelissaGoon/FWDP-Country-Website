@@ -14,38 +14,3 @@ document.addEventListener("DOMContentLoaded", function () {
     })
 
 });
-
-// Taken from: https://benfrain.com/automatically-play-and-pause-video-as-it-enters-and-leaves-the-viewport-screen/
-function playPauseVideo() {
-    let videos = document.querySelectorAll("video");
-    videos.forEach((video) => {
-
-        video.muted = true;
-        let playPromise = video.play();
-        if (playPromise !== undefined) {
-            playPromise.then((_) => {
-                let observer = new IntersectionObserver(
-                    (entries) => {
-                        entries.forEach((entry) => {
-                            if (
-                                entry.intersectionRatio !== 1 &&
-                                !video.paused
-                            ) {
-                                video.pause();
-                            } else if (video.paused) {
-                                video.play();
-                            }
-                        });
-                    },
-                    { threshold: 1 }
-                    // Video only plays when fully on screen
-                );
-                observer.observe(video);
-            });
-        }
-    });
-}
-
-playPauseVideo();
-
-

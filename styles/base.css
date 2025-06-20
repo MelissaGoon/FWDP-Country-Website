@@ -78,6 +78,24 @@ th {
     text-align: center;
 }
 
+ul {
+    padding: 0;
+}
+
+
+/*# Text Decoration #*/
+.flowers::after,
+.flowers::before {
+    content: '';
+    background-image: url("../assets/flower-icon-light.svg");
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
 
 /*## Components ##*/
 .site-wrapper {
@@ -93,7 +111,7 @@ header {
     right: 0;
     background-color: var(--dark-brown);
     padding: 0.5rem 1rem;
-    border-image: url('/assets/border-tile.svg') 100% 0 0 0 / 1rem / 1rem repeat;
+    border-image: url('../assets/border-tile.svg') 100% 0 0 0 / 1rem / 1rem repeat;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -177,7 +195,7 @@ header a:active {
     right: -100%;
     width: 60%;
     background-color: var(--brown);
-    border-image: url('/assets/flower-icon-light.svg') 100% / 1rem repeat;
+    border-image: url('../assets/flower-icon-light.svg') 100% / 1rem repeat;
     padding: 1rem;
     padding-bottom: 2rem;
     z-index: 999;
@@ -217,7 +235,7 @@ header a:active {
     header {
         position: static;
         background-color: var(--brown);
-        border-image: url('/assets/border-tile.svg') 0 0 100% 0 / 1rem / 1rem repeat;
+        border-image: url('../assets/border-tile.svg') 0 0 100% 0 / 1rem / 1rem repeat;
         display: grid;
         grid-template-columns: 1fr 6.75rem 11.125rem 4.6875rem 11.125rem 4.6875rem 11.125rem 6.75rem 1fr;
         padding: 1rem 2rem;
@@ -325,6 +343,7 @@ header a:active {
     }
 
     .hero {
+        margin-top: 1rem;
         height: 35rem;
     }
 

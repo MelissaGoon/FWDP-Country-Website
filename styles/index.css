@@ -26,7 +26,7 @@ main {
 
 /* Page Title */
 .hero {
-    background: url('/assets/images/mobile-hero.png') no-repeat;
+    background: url('../assets/images/mobile-hero.png') no-repeat;
     background-size: cover;
 }
 
@@ -44,7 +44,7 @@ main {
     .hero {
         grid-row: 13/23;
         grid-column: 3/8;
-        background: url('/assets/images/desktop-hero.png') no-repeat;
+        background: url('../assets/images/desktop-hero.png') no-repeat;
         filter: brightness(0.4) sepia(0.2);
         height: 100%;
         z-index: -1;
@@ -221,22 +221,9 @@ main {
         border: none;
         font-size: 2.5rem;
         background: var(--dark-brown);
-        background: radial-gradient(circle, rgba(57, 24, 9, 0.8) 46%, rgba(57, 24, 9, 0) 100%);
+        border: 2px var(--cream) solid;
         color: var(--cream);
         margin-bottom: 8rem;
-
-    }
-
-    #link-section h2::before,
-    #link-section h2::after {
-        content: '';
-        background-image: url("/assets/flower-icon-light.svg");
-        display: inline-block;
-        width: 2rem;
-        height: 2rem;
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
 
     }
 

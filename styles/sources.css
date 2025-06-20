@@ -1,0 +1,50 @@
+/*# Main #*/
+main {
+    padding: 1rem;
+}
+
+/* Page Title */
+h1 {
+    text-align: center;
+}
+
+
+
+/* Sources  */
+.source-box {
+    background: var(--light-brown);
+    padding: 1rem;
+    text-align: center;
+    margin: 1rem auto;
+}
+
+h2.flowers::after,
+h2.flowers::before {
+    background-image: url("../assets/flower-icon-dark.svg");
+    width: 1.4rem;
+    height: 1.4rem;
+}
+
+.source-box li {
+    list-style: none;
+
+}
+
+.source-box a {
+    display: block;
+    margin: 1.5rem;
+}
+
+@media (min-width: 60em) {
+    .source-box {
+        max-width: 50rem;
+    }
+
+    .source-box a {
+        display: block;
+        margin: 2rem auto;
+        max-width: fit-content;
+    }
+
+
+}
