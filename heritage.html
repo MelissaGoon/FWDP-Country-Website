@@ -22,9 +22,11 @@
 
     <link rel="stylesheet" href="styles/normalize-fwd.css">
     <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/info-pages.css">
 </head>
 
 <body>
+    <a class="screen-reader-text" href="#site-main">Skip to content</a>
     <div class="site-wrapper">
         <header>
             <a href="index.html" class="logo-container">
@@ -63,8 +65,83 @@
             </nav>
         </header>
 
+        <main id="site-main">
+            <h1 class="title">Heritage</h1>
+            <video class="hero" src="assets/video/heritage.mp4" muted autoplay loop playsinline></video>
 
-        <!-- Content here -->
+            <section class="info-gallery">
+                <article class="info-card">
+                    <div class="info-card-text">
+                        <h2>
+                            Heritage Zones
+                        </h2>
+                        <p>
+                            Step into the living history of George Town, <a href="index.html#main-info">Penang</a> — a
+                            city
+                            where centuries-old streets,
+                            vibrant cultures, and timeless architecture come together in a breathtaking tapestry of East
+                            and
+                            West. Recognized as a UNESCO World Heritage Site since 2008, George Town’s heritage area is
+                            lovingly preserved within two distinctive zones: the Core Zone and the Buffer Zone.
+                        </p>
+
+                        <a href="#">Read More <span class="screen-reader-text"> about Penang's heritage.</span></a>
+                    </div>
+
+                    <div class="card-img-box">
+                        <img src="assets/images/heritage-info.png"
+                            alt="An image of Armenian Street in Penang displaying a narrow road with lanterns hanging above.">
+                    </div>
+                </article>
+
+                <article class="info-card">
+                    <div class="info-card-text">
+                        <h2>
+                            Street Art
+                        </h2>
+                        <p>
+                            In Penang, art comes alive on the streets. Colorful murals and playful sculptures transform
+                            alleyways and heritage walls into an open-air gallery. Born from the city’s rich
+                            multicultural
+                            history, Penang’s street art blends local stories, traditional trades, and nostalgic
+                            childhood
+                            scenes with a touch of humor and whimsy.
+                        </p>
+                        <a href="#">Read More <span class="screen-reader-text"> about Penang's street art.</span></a>
+                    </div>
+                    <div class="card-img-box">
+                        <img src="assets/images/street-art-info.png"
+                            alt="An image of Armenian Street in Penang displaying a narrow road with lanterns hanging above.">
+                    </div>
+                </article>
+
+                <article class="info-card">
+                    <div class="info-card-text">
+                        <h2>
+                            Places of Worship
+                        </h2>
+                        <p>
+                            Penang’s diverse heritage shines through its historic places of worship, where mosques,
+                            temples,
+                            and churches stand side by side. Highlights include the 19th-century Masjid Kapitan Keling,
+                            Chinese clan temples, Hindu shrines, and colonial churches — each a reflection of the city’s
+                            rich, multicultural past and spirit of harmony.
+                        </p>
+                        <a href="#">Read More <span class="screen-reader-text"> about Penang's places of
+                                worship.</span></a>
+                    </div>
+                    <div class="card-img-box">
+                        <img src="assets/images/worship-info.png"
+                            alt="An image of Armenian Street in Penang displaying a narrow road with lanterns hanging above.">
+                    </div>
+                </article>
+
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; Melissa Goon 2025. For educational purposes.</p>
+        </footer>
     </div>
 
     <script src="scripts/navigation.js"></script>

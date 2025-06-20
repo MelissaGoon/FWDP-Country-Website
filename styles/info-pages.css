@@ -1,0 +1,91 @@
+/*# Main #*/
+
+/* Page Title */
+.hero {
+    filter: sepia(0.5) brightness(0.8) saturate(1.5);
+}
+
+/* Information Gallery */
+.info-gallery {
+    padding: 3rem 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.info-card {
+    border: 1px var(--dark-brown) solid;
+    border-radius: 10px;
+    padding: 1rem;
+    overflow: hidden;
+    max-width: 22rem;
+    height: 35rem;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.info-card-text {
+    margin: 1rem 0;
+}
+
+.info-card h2 {
+    margin: 0;
+}
+
+.info-card h2::after {
+    content: '';
+    background-image: url("/assets/flower-icon-dark.svg");
+    display: inline-block;
+    width: 1.1rem;
+    height: 1.1rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.card-img-box {
+    border-radius: 10px;
+    width: 100%;
+    overflow: hidden;
+    flex: auto;
+
+
+}
+
+.info-card img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+@media (min-width: 60em) {
+
+    /* Information Gallery */
+    .info-gallery {
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .info-card {
+        flex-direction: row;
+        max-width: 70.75rem;
+        height: 20rem;
+    }
+
+    .info-card-text {
+        margin: auto 1rem;
+        flex: auto;
+    }
+
+    .card-img-box {
+        min-width: 35%;
+        flex: auto;
+
+    }
+
+}
