@@ -28,12 +28,11 @@ h2.flowers::before {
 
 .source-box li {
     list-style: none;
-
+    margin: 1.5rem;
 }
 
 .source-box a {
     display: block;
-    margin: 1.5rem;
 }
 
 @media (min-width: 60em) {

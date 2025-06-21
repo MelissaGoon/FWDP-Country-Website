@@ -90,24 +90,24 @@
                         <caption>Climate Data for Penang (1961–1990)</caption>
                         <thead>
                             <tr>
-                                <th>Data</th>
-                                <th>Jan</th>
-                                <th>Feb</th>
-                                <th>Mar</th>
-                                <th>Apr</th>
-                                <th>May</th>
-                                <th>Jun</th>
-                                <th>Jul</th>
-                                <th>Aug</th>
-                                <th>Sep</th>
-                                <th>Oct</th>
-                                <th>Nov</th>
-                                <th>Dec</th>
+                                <th scope="col">Data</th>
+                                <th scope="col">Jan</th>
+                                <th scope="col">Feb</th>
+                                <th scope="col">Mar</th>
+                                <th scope="col">Apr</th>
+                                <th scope="col">May</th>
+                                <th scope="col">Jun</th>
+                                <th scope="col">Jul</th>
+                                <th scope="col">Aug</th>
+                                <th scope="col">Sep</th>
+                                <th scope="col">Oct</th>
+                                <th scope="col">Nov</th>
+                                <th scope="col">Dec</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <th>Daily Mean Temperature</th>
+                                <th scope="row">Daily Mean Temperature</th>
                                 <td>26.9 °C</td>
                                 <td>27.4 °C</td>
                                 <td>27.6 °C</td>
@@ -122,7 +122,7 @@
                                 <td>26.7 °C</td>
                             </tr>
                             <tr>
-                                <th>Average Rainy Days (≥ 1.0 mm)</th>
+                                <th scope="row">Average Rainy Days (≥ 1.0 mm)</th>
                                 <td>5</td>
                                 <td>6</td>
                                 <td>9</td>
@@ -181,16 +181,16 @@
                 <h2>Join our monthly newsletter!</h2>
                 <p>
                     <label for="name">Name:</label>
-                    <input type="text" name="user-name" id="name" placeholder="Your name here...">
+                    <input type="text" name="user-name" id="name" placeholder="Your name here..." required>
 
                 </p>
 
                 <p>
                     <label for="mail">Email:</label>
-                    <input type="email" name="user-email" id="mail" placeholder="123@mail.com">
+                    <input type="email" name="user-email" id="mail" placeholder="123@mail.com" required>
                 </p>
                 <p>
-                    <input type="checkbox" name="consent" id="consent">
+                    <input type="checkbox" name="consent" id="consent" required>
                     <label for="consent"> I consent to receiving news and updates about Penang.</label>
                 </p>
 

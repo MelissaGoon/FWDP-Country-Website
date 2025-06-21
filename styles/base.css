@@ -407,3 +407,9 @@ footer {
     padding-bottom: 5rem;
     text-align: center;
 }
+
+@media (min-width: 60em) {
+    footer {
+        padding-top: 4rem;
+    }
+}
